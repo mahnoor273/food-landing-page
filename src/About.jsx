@@ -9,34 +9,42 @@ const About = () => {
         {/* LEFT IMAGE WITH OVERLAY CARD */}
         <div className="relative w-full">
 
-          {/* Image — ONLY responsive height added */}
+          {/* Image */}
           <img
             src={foodImg}
             alt="Food"
-            className="w-full 
-                       h-[240px] sm:h-[300px] md:h-[380px]
-                       object-cover rounded-xl shadow-lg"
+            className="
+              w-full
+              h-[240px] sm:h-[300px] md:h-[380px]
+              object-cover
+              rounded-xl
+              shadow-lg
+            "
           />
 
-          {/* OVERLAY CARD — SAME POSITION, responsive width */}
+          {/* Overlay Card */}
           <div
-            className="absolute 
-                       top-32 sm:top-36 md:top-43 
-                       left-6 sm:left-12 md:left-53
-                       bg-gray-900 text-white
-                       p-6 sm:p-8
-                       rounded-xl
-                       w-[90%] sm:w-[320px] md:w-[370px]
-                       min-h-[260px]
-                       shadow-2xl
-                       flex flex-col justify-start"
+            className="
+              bg-gray-900 text-white
+              p-6 sm:p-8
+              rounded-xl
+              w-full sm:w-[320px] md:w-[370px]
+              min-h-[260px]
+              shadow-2xl
+              flex flex-col justify-start
+
+              mt-6                 /* mobile: image ke neeche */
+              md:absolute          /* desktop: overlay */
+              md:top-43
+              md:left-53
+              md:mt-0
+            "
           >
             <h3 className="text-xl font-semibold mb-4 mt-6">
               Come and visit us
             </h3>
 
             <div className="space-y-4 text-[15px] leading-relaxed mt-2">
-
               <div className="flex items-start gap-3">
                 <span className="text-lg">📞</span>
                 <span>(444) 007 - 0007</span>
@@ -54,12 +62,11 @@ const About = () => {
                   LA 90201, Los Angeles
                 </span>
               </div>
-
             </div>
           </div>
         </div>
 
-        {/* RIGHT CONTENT — UNCHANGED */}
+        {/* RIGHT CONTENT */}
         <div>
           <h1 className="text-4xl font-bold text-gray-900 leading-tight font-[Playfair_Display]">
             We provide healthy <br /> food for your family.
@@ -87,3 +94,4 @@ const About = () => {
 };
 
 export default About;
+
